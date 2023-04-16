@@ -21,7 +21,7 @@ while true; do
     fi
 
     # show a notification that the system is about to suspend
-    notify-send "System will suspend in 30 seconds"
+    notify-send -u critical -a 'Suspender' -i '/usr/share/icons/hicolor/scalable/actions/libpeas-plugin.svg' -t 30000  "System will suspend in 30 seconds" 
 
     # wait for 30 seconds before suspending
     sleep 30
