@@ -1,0 +1,10 @@
+[Unit]
+Description=Suspend timer (suspender) service
+
+[Service]
+ExecStart=/usr/share/suspender
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
