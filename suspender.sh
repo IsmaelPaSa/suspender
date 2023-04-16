@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # time in seconds
-cgf_time=1500
-
-time=$cfg_time
+time=1500
 
 # state file
 state_file="/var/tmp/suspend_state"
@@ -29,5 +27,5 @@ while true; do
     touch "$state_file"
 
     # reset the timer after manual or general suspension
-    time=$cfg_time
+    time=1500
 done
