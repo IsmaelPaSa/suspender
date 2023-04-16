@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # time in seconds
-time=1500
+time=1530
 
 # state file
 state_file="/var/tmp/suspend_state"
@@ -20,6 +20,12 @@ while true; do
         fi
     fi
 
+    # show a notification that the system is about to suspend
+    notify-send "System will suspend in 30 seconds"
+
+    # wait for 30 seconds before suspending
+    sleep 30
+
     # suspend the system
     systemctl suspend
 
@@ -27,5 +33,5 @@ while true; do
     touch "$state_file"
 
     # reset the timer after manual or general suspension
-    time=1500
+    time=1530
 done
