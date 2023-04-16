@@ -2,7 +2,7 @@
 Description=Suspend timer (suspender) service
 
 [Service]
-ExecStart=/usr/share/suspender
+ExecStart=/usr/bin/suspender
 Restart=always
 User=root
 
